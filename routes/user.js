@@ -3,7 +3,9 @@
  * GET users listing.
  */
 
-var users = [
+var mongoose = require('mongoose');
+
+var users_old = [
     { 
 	name: 'Daniel',
 	age: '25'
@@ -12,9 +14,13 @@ var users = [
 	name: 'Sara',
 	age: '26'
     }
-]
+];
 
+
+ mongoose.model('users', {name : String});
 
 exports.list = function(req, res){
-  res.send(users);
+    mongoose.model('users').find(function(err, users){
+	res.send(users);
+    });
 };

@@ -7,7 +7,18 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mongoose= require('mongoose');
+
+var connect_db = 'mongodb://dkeresteci:saucyj42@dbh15.mongolab.com:27157/heroku_app25047261';
+
+mongoose.connect(connect_db);
+
+var db = mongoose.connection;
+db.on('error', function () {
+  throw new Error('unable to connect to database at ' + connect_var);
+});
+
 
 var app = express();
 
