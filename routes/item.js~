@@ -1,0 +1,14 @@
+/*                                                                                                            
+ * GET items listing.                                                                                         
+ */
+
+var mongoose = require('mongoose');
+
+
+ mongoose.model('items');
+
+exports.list = function(req, res){
+    mongoose.model('items').find(function(err, items){
+        res.send(items);
+    });
+};
