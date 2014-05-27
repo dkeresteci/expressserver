@@ -9,7 +9,8 @@
     "express": "~3.3.4",
     "jade": "~0.34.0",
     "mongodb": "~1.4.3",
-    "mongoose": "~3.8.9"
+    "mongoose": "~3.8.9",
+    "nodemailer": "~0.6.5"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
