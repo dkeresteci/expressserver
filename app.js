@@ -11,7 +11,7 @@ var express = require('express')
   , path = require('path')
   , mongoose= require('mongoose');
 
-var connect_db = 'mongodb://dkeresteci:?AM*?^n0.%BOq8uC14$&@dbh15.mongolab.com:27157/heroku_app25047261';
+var connect_db = 'mongodb://myuser:HvYxOZFOoL5J2QREjSuf@dbh15.mongolab.com:27157/heroku_app25047261';
 
 mongoose.connect(connect_db);
 
